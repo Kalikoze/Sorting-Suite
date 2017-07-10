@@ -25,5 +25,4 @@ describe('bubbleSort function', () => {
     bubbleSort(unsortedArray);
     expect(unsortedArray).to.equal(unsortedArray.sort())
   })
-
 })
