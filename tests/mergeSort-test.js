@@ -12,13 +12,21 @@ describe('mergeSort function', () => {
     let unsortedArray = ['z', 'a', 'w', 'l', 'm'];
 
     expect(unsortedArray).to.deep.equal(['z', 'a', 'w', 'l', 'm']);
-    mergeSort(unsortedArray);
-    expect(unsortedArray).to.deep.equal(['a', 'l', 'm', 'w', 'z'])
+    let sortedArray = mergeSort(unsortedArray);
+    expect(sortedArray).to.deep.equal(['a', 'l', 'm', 'w', 'z'])
   })
 
-  it.skip('should be able to sort a large, randomly generated database', () => {
+  it('should be able to sort an array of negative numbers', () => {
+    let unsortedArray = [-1, -84, -25, -155, -7]
+
+    expect(unsortedArray).to.deep.equal([-1, -84, -25, -155, -7]);
+    let sortedArray = mergeSort(unsortedArray);
+    expect(sortedArray).to.deep.equal([-155, -84, -25, -7, -1])
+  })
+
+  it('should be able to sort a large, randomly generated database', () => {
     let unsortedArray = [];
-    let randomNumber = 10000;
+    let randomNumber = 1000;
 
     for (let i = 0; i < randomNumber; i++) {
       unsortedArray.push(Math.floor(Math.random() * (1000 - 100 + 1)) + 100)
@@ -27,8 +35,8 @@ describe('mergeSort function', () => {
     let copy = Array.from(unsortedArray);
 
     expect(unsortedArray).to.deep.equal(unsortedArray);
-    mergeSort(unsortedArray);
-    expect(unsortedArray).to.deep.equal(copy.sort((a, b) => {
+    let sortedArray = mergeSort(unsortedArray);
+    expect(sortedArray).to.deep.equal(copy.sort((a, b) => {
       return a - b;
     }))
   })
