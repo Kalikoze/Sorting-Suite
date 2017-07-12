@@ -5,12 +5,12 @@ const quickSort = (array) => {
   var leftSide = [];
   var rightSide = [];
 
-  if(array.length < 2) {
+  if (array.length < 2) {
     return array;
   }
 
-  for(var i = 1; i < array.length; i++) {
-    if(array[i] < pivot) {
+  for (var i = 1; i < array.length; i++) {
+    if (array[i] < pivot) {
       leftSide.push(array[i]);
     } else {
       rightSide.push(array[i]);
