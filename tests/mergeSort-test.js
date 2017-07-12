@@ -13,6 +13,7 @@ describe('mergeSort function', () => {
 
     expect(unsortedArray).to.deep.equal(['z', 'a', 'w', 'l', 'm']);
     let sortedArray = mergeSort(unsortedArray);
+
     expect(sortedArray).to.deep.equal(['a', 'l', 'm', 'w', 'z'])
   })
 
@@ -21,6 +22,7 @@ describe('mergeSort function', () => {
 
     expect(unsortedArray).to.deep.equal([-1, -84, -25, -155, -7]);
     let sortedArray = mergeSort(unsortedArray);
+
     expect(sortedArray).to.deep.equal([-155, -84, -25, -7, -1])
   })
 
@@ -36,6 +38,7 @@ describe('mergeSort function', () => {
 
     expect(unsortedArray).to.deep.equal(unsortedArray);
     let sortedArray = mergeSort(unsortedArray);
+
     expect(sortedArray).to.deep.equal(copy.sort((a, b) => {
       return a - b;
     }))

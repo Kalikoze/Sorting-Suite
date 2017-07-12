@@ -12,7 +12,8 @@ describe('quickSort function', () => {
 
     expect(unsortedArray).to.deep.equal(['z', 'a', 'w', 'l', 'm']);
     let sortedArray = quickSort(unsortedArray);
-    expect(unsortedArray).to.deep.equal(unsortedArray, ['a', 'l', 'm', 'w', 'z'])
+
+    expect(sortedArray).to.deep.equal(['a', 'l', 'm', 'w', 'z'])
   })
 
   it('should be able to sort an array of negative numbers', () => {
@@ -20,6 +21,7 @@ describe('quickSort function', () => {
 
     expect(unsortedArray).to.deep.equal([-1, -84, -25, -155, -7]);
     let sortedArray = quickSort(unsortedArray);
+
     expect(sortedArray).to.deep.equal([-155, -84, -25, -7, -1])
   })
 
@@ -35,6 +37,7 @@ describe('quickSort function', () => {
 
     expect(unsortedArray).to.deep.equal(unsortedArray);
     let sortedArray = quickSort(unsortedArray);
+
     expect(sortedArray).to.deep.equal(copy.sort((a, b) => {
       return a - b;
     }))

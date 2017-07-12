@@ -1,7 +1,7 @@
 const letters = ["d", "b", "a", "c"]
 
 const mergeSort = array => {
-  let middleNum = Math.floor(array.length/2);
+  let middleNum = Math.floor(array.length / 2);
   let leftSide = array.slice(0, middleNum);
   let rightSide = array.slice(middleNum);
 
