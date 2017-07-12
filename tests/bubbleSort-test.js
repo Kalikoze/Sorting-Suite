@@ -7,7 +7,7 @@ describe('bubbleSort function', () => {
     assert.isFunction(bubbleSort);
   })
 
-  it('should be able to sort an array', () => {
+  it('should be able to sort an array of letters', () => {
     let unsortedArray = ['z', 'a', 'w', 'l', 'm'];
 
     expect(unsortedArray).to.deep.equal(['z', 'a', 'w', 'l', 'm']);
@@ -15,9 +15,17 @@ describe('bubbleSort function', () => {
     expect(unsortedArray).to.deep.equal(['a', 'l', 'm', 'w', 'z'])
   })
 
+  it('should be able to sort an array of negative numbers', () => {
+    let unsortedArray = [-1, -84, -25, -155, -7]
+
+    expect(unsortedArray).to.deep.equal([-1, -84, -25, -155, -7]);
+    bubbleSort(unsortedArray);
+    expect(unsortedArray).to.deep.equal([-155, -84, -25, -7, -1])
+  })
+
   it('should be able to sort a large, randomly generated database', () => {
     let unsortedArray = [];
-    let randomNumber = 10000;
+    let randomNumber = 15000;
 
     for (let i = 0; i < randomNumber; i++) {
       unsortedArray.push(Math.floor(Math.random() * (1000 - 100 + 1)) + 100)

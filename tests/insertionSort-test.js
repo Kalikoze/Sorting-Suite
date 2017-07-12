@@ -15,9 +15,17 @@ describe('insertionSort function', () => {
     expect(unsortedArray).to.deep.equal(unsortedArray, ['a', 'l', 'm', 'w', 'z'])
   })
 
+  it('should be able to sort an array of negative numbers', () => {
+    let unsortedArray = [-1, -84, -25, -155, -7]
+
+    expect(unsortedArray).to.deep.equal([-1, -84, -25, -155, -7]);
+    insertionSort(unsortedArray);
+    expect(unsortedArray).to.deep.equal([-155, -84, -25, -7, -1])
+  })
+
   it('should be able to sort a large, randomly generated database', () => {
     let unsortedArray = [];
-    let randomNumber = 10000;
+    let randomNumber = 15000;
 
     for (let i = 0; i < randomNumber; i++) {
       unsortedArray.push(Math.floor(Math.random() * (1000 - 100 + 1)) + 100)
