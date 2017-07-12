@@ -28,7 +28,7 @@ describe('insertionSort function', () => {
     expect(unsortedArray).to.deep.equal(unsortedArray);
     insertionSort(unsortedArray);
     expect(unsortedArray).to.deep.equal(copy.sort((a, b) => {
-      a - b;
+      return a - b;
     }))
   })
 })
