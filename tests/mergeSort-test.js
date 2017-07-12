@@ -26,7 +26,7 @@ describe('mergeSort function', () => {
 
   it('should be able to sort a large, randomly generated database', () => {
     let unsortedArray = [];
-    let randomNumber = 1000;
+    let randomNumber = 50000;
 
     for (let i = 0; i < randomNumber; i++) {
       unsortedArray.push(Math.floor(Math.random() * (1000 - 100 + 1)) + 100)
