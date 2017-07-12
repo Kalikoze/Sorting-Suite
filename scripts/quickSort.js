@@ -17,9 +17,9 @@ const quickSort = (array) => {
     }
   }
 
-  return quickSort(leftSide).concat(pivot, quickSort(rightSide));
+  return [...quickSort(leftSide), pivot, ...quickSort(rightSide)];
 }
 
 quickSort(letters);
 
-module.exports = quickSort
+module.exports = quickSort;
