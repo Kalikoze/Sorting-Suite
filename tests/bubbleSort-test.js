@@ -17,18 +17,18 @@ describe('bubbleSort function', () => {
 
   it('should be able to sort a large, randomly generated database', () => {
     let unsortedArray = [];
-    let randomNumber = 1000;
-    
+    let randomNumber = 10000;
+
     for (let i = 0; i < randomNumber; i++) {
       unsortedArray.push(Math.floor(Math.random() * (1000 - 100 + 1)) + 100)
     }
 
-    let copy = Array.from(unsortedArray)
+    let copy = Array.from(unsortedArray);
 
     expect(unsortedArray).to.deep.equal(unsortedArray);
     bubbleSort(unsortedArray);
-    expect(unsortedArray).to.deep.equal(copy.sort( (a, b) => {
-      a - b;
+    expect(unsortedArray).to.deep.equal(copy.sort((a, b) => {
+      return a - b;
     }))
   })
 })
