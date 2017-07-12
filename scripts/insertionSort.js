@@ -1,8 +1,6 @@
 const letters = ["d", "b", "a", "c"]
 
 const insertionSort = array => {
-
-
   for (let i = 0; i < array.length; i++) {
     for (let j = i; j >= 0; j--) {
       if (array[j] > array[j + 1]) {
@@ -15,4 +13,4 @@ const insertionSort = array => {
 
 insertionSort(letters);
 
-module.exports = insertionSort; 
+module.exports = insertionSort;

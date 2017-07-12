@@ -1,6 +1,5 @@
 const letters = ["d", "b", "a", "c"]
 
-
 const mergeSort = array => {
   let middleNum = Math.floor(array.length/2);
   let leftSide = array.slice(0, middleNum);
@@ -10,10 +9,6 @@ const mergeSort = array => {
     return array;
   }  return merge(mergeSort(leftSide), mergeSort(rightSide))
 }
-
-
-
-
 
 const merge = (leftSide, rightSide) => {
   let newArray = [];
@@ -32,3 +27,5 @@ const merge = (leftSide, rightSide) => {
 }
 
 mergeSort(letters);
+
+module.exports = { mergeSort, merge };
